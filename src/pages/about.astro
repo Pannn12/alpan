@@ -1,0 +1,164 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { ABOUT_TITLE, SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { Image } from "astro:assets";
+
+import alpanImage from "../image/alpan.jpg";
+import alpannImage from "../image/alpann.jpg";
+import alpannnnImage from "../image/alpannnn.jpg";
+import gheaImage from "../image/ghea.png";
+import gitarImage from "../image/gitar.jpg";
+import onielImage from "../image/oniel.jpg";
+import playlistImage from "../image/playlist.jpg";
+import emailImage from "../image/email.png";
+import instagramImage from "../image/instagram.png";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={ABOUT_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <main>
+      <Image
+        src={alpanImage}
+        alt="alpanimage"
+        style="width: 125px; height: 125px; border-radius: 50%; float: center; display: block; margin: 0 auto;"
+      />
+      <br />
+      <strong>Front-End Developer</strong>
+      <br />
+      a happy front-end developer who strives to help others grow in web/apps development<br
+      />
+      <br />
+      <p>
+        <div class="container">
+          <div class="gambar">
+            <Image
+              src={alpannnnImage}
+              alt="foto 1"
+              style="width: 150px; height: 150px; float: center;"
+            />
+          </div>
+          <div class="gambar">
+            <Image
+              src={gitarImage}
+              alt="foto 2"
+              style="width: 150px; height: 150px; float: center;"
+            />
+          </div>
+          <div class="gambar">
+            <Image
+              src={alpannImage}
+              alt="foto 3"
+              style="width: 150px; height: 150px; float: center;"
+            />
+          </div>
+        </div>
+        <div class="container">
+          <div class="gambar">
+            <Image
+              src={onielImage}
+              alt="foto 4"
+              style="width: 150px; height: 150px; float: center;"
+            />
+          </div>
+          <div class="gambar">
+            <Image
+              src={playlistImage}
+              alt="foto 5"
+              style="width: 150px; height: 150px; float: center;"
+            />
+          </div>
+          <div class="gambar">
+            <Image
+              src={gheaImage}
+              alt="foto 6"
+              style="width: 150px; height: 150px; float: center;"
+            />
+          </div>
+        </div>
+        <br />
+        <strong>Contact me via</strong>
+        <br />
+        <a class="featured">
+          <div class="contact-container">
+            <a href="https://www.instagram.com/kelraskie/" target="_blank">
+              <Image
+                src={instagramImage}
+                alt="instagram image"
+                style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+              />
+            </a>
+            <span class="username">@kelraskie</span>
+          </div>
+          <div class="contact-container">
+            <a
+              href="https://mail.google.com/?alfanhidayat12321@gmail.comm"
+              target="_blank"
+            >
+              <Image
+                src={emailImage}
+                alt="email image"
+                style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+              />
+            </a>
+            <span class="username">alfanhidayat12321@gmail.com</span>
+          </div>
+        </a>
+        You can contact me via email & instagram, or <strong>click image</strong
+        >.
+
+        <style>
+          .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+          }
+
+          .gambar {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(190, 88, 88, 0.1);
+          }
+
+          .gambar img {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+          }
+          .contact-container {
+            display: flex;
+            align-items: center;
+          }
+
+          .instagram-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+          }
+
+          .keterampilann {
+            text-align: left;
+            color: black;
+            font-size: 18px;
+          }
+          .username {
+            margin-top: -4px;
+            font-size: 18px;
+            color: black;
+          }
+        </style>
+      </p>
+    </main>
+    <Footer />
+  </body>
+</html>

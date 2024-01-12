@@ -1,0 +1,135 @@
+---
+import profilImage from "../image/alpannn.jpg";
+import htmlImage from "..//image/html.png";
+import cssImage from "..//image/css.png";
+import jsImage from "..//image/js.png";
+import cppImage from "..//image/c++.png";
+import gitImage from "..//image/git.png";
+import githubImage from "..//image/github.png";
+import reactImage from "..//image/react.png";
+import pinImage from "..//image/pin.png";
+import gptImage from "..//image/gpt.png";
+import astroImage from "../image/astro.jpg";
+import vscodeImage from "../image/vscode.png";
+import instagramImage from "../image/instagram.png";
+import nodeImage from "../image/node.png";
+import vercelImage from "../image/vercel.png";
+import emailImage from "../image/email.png";
+import riotImage from "../image/riot.png";
+import tsImage from "../image/ts.png";
+import gittImage from "../image/gitignore.png";
+
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { HOME_TITLE, SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { Image } from "astro:assets";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={HOME_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <main>
+      <Image
+        src={profilImage}
+        alt="alpanimage"
+        style="width: 125px; height: 125px; border-radius: 50%; float: center; display: block; margin: 0 auto;"
+      />
+      <a class="nama" href="https://instagram.com/kelraskie">
+        <h1>Alfan Hidayat</h1>
+      </a>
+      Hello, I am a student in the Informatics Engineering Study Program at Pamulang
+      University. I am currently learning in the world of web development, especially
+      in the field of front-end development.<br />
+      <br />
+      <strong>My Skills</strong>
+      <p>
+        <a>
+          <Image
+            src={htmlImage}
+            alt="html"
+            style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+          />
+          <Image
+            src={cssImage}
+            alt="css"
+            style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+          />
+          <Image
+            src={jsImage}
+            alt="javascript"
+            style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+          />
+          <Image
+            src={reactImage}
+            alt="react"
+            style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+          />
+          <Image
+            src={cppImage}
+            alt="c++"
+            style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+          />
+        </a>
+      </p>
+      <p>
+        I'm currently focused on becoming a skilled front-end developer with a
+        passion for building engaging and user-friendly web applications.
+      </p>
+      <p>
+        I independently learned <strong>HTML</strong>, <strong>CSS</strong>, and <strong
+          >JavaScript</strong
+        > at home, including exploring <strong>React</strong>. Meanwhile, I
+        focused on the <strong>C++</strong>
+        programming language at campus. With these dual approaches, I've been developing
+        skills in both web and programming domains.
+      </p>
+      <>
+        <br />
+        <strong>Featured Technologies Used</strong>
+        <br />
+        <Image
+          src={astroImage}
+          alt="git"
+          style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+        />
+        <Image
+          src={vercelImage}
+          alt="vercel"
+          style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+        />
+        <Image
+          src={nodeImage}
+          alt="node js"
+          style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+        />
+
+        <Image
+          src={gittImage}
+          alt="node js"
+          style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+        />
+      </>
+      <p>
+        <strong>References<br /></strong>
+
+        <Image
+          src={gptImage}
+          alt="gpt"
+          style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+        />
+
+        <Image
+          src={pinImage}
+          alt="pin"
+          style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+        />
+      </p>
+    </main>
+    <Footer />
+  </body>
+</html>
