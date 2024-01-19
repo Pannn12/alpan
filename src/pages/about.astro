@@ -1,19 +1,23 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { ABOUT_TITLE, SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import { Image } from "astro:assets";
-
-import alpanImage from "../image/alpan.jpg";
+import alpannnnnnnnImage from "../image/alpannnnnnnn.jpg";
 import alpannImage from "../image/alpann.jpg";
 import alpannnnImage from "../image/alpannnn.jpg";
+import alpannnnnImage from "../image/alpannnnn.jpg";
+import alpannnnnnImage from "../image/alpannnnnn.jpg";
+import alpannnnnnnImage from "../image/alpannnnnnn.jpg";
 import gheaImage from "../image/ghea.png";
 import gitarImage from "../image/gitar.jpg";
 import onielImage from "../image/oniel.jpg";
 import playlistImage from "../image/playlist.jpg";
 import emailImage from "../image/email.png";
 import instagramImage from "../image/instagram.png";
+
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { ABOUT_TITLE, SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+import { Image } from "astro:assets";
 ---
 
 <!doctype html>
@@ -24,61 +28,70 @@ import instagramImage from "../image/instagram.png";
   <body>
     <Header title={SITE_TITLE} />
     <main>
-      <Image
-        src={alpanImage}
-        alt="alpanimage"
-        style="width: 125px; height: 125px; border-radius: 50%; float: center; display: block; margin: 0 auto;"
-      />
+      <strong>Hi, Everyone!</strong>
+      <div class="typing-text">
+        <strong>Alfan Hidayat | Web Developer</strong>
+      </div>
       <br />
-      <strong>Front-End Developer</strong>
-      <br />
-      a happy front-end developer who strives to help others grow in web/apps development<br
-      />
-      <br />
+      <div class="profile">
+        <div class="profileimage">
+          <Image
+            src={alpannImage}
+            alt="alpanimage"
+            style="width: 100px; height: 100px; border-radius: 50%; float: left; display: block; margin: 0 auto;"
+          />
+        </div>
+        <div class="profiletext">
+          I am a student in the Informatics Engineering Study Program at
+          Pamulang University. I am currently learning in the world of web
+          development, especially in the field of front-end development.
+        </div>
+      </div>
+
       <p>
         <div class="container">
           <div class="gambar">
             <Image
-              src={alpannnnImage}
+              src={alpannnnnnnImage}
               alt="foto 1"
-              style="width: 150px; height: 150px; float: center;"
+              style="width: 100px; height: 100px;  float: center;"
             />
           </div>
           <div class="gambar">
             <Image
-              src={gitarImage}
+              src={alpannnnImage}
               alt="foto 2"
-              style="width: 150px; height: 150px; float: center;"
+              style="width: 100px; height: 100px; float: center;"
             />
           </div>
           <div class="gambar">
             <Image
-              src={alpannImage}
+              src={alpannnnnnImage}
               alt="foto 3"
-              style="width: 150px; height: 150px; float: center;"
+              style="width: 100px; height: 100px; float: center;"
             />
           </div>
         </div>
         <div class="container">
           <div class="gambar">
             <Image
-              src={onielImage}
+              src={alpannnnnImage}
               alt="foto 4"
-              style="width: 150px; height: 150px; float: center;"
+              style="width: 100px; height: 100px; float: center;"
             />
           </div>
           <div class="gambar">
             <Image
-              src={playlistImage}
+              src={alpannnnnnnnImage}
               alt="foto 5"
-              style="width: 150px; height: 150px; float: center;"
+              style="width: 100px; height: 100px; float: center;"
             />
           </div>
           <div class="gambar">
             <Image
-              src={gheaImage}
+              src={gitarImage}
               alt="foto 6"
-              style="width: 150px; height: 150px; float: center;"
+              style="width: 100px; height: 100px; float: center;"
             />
           </div>
         </div>
@@ -110,9 +123,14 @@ import instagramImage from "../image/instagram.png";
             <span class="username">alfanhidayat12321@gmail.com</span>
           </div>
         </a>
-        You can contact me via email & instagram, or <strong>click image</strong
-        >.
-
+        You can contact me via email & instagram, or <strong
+          >click image.</strong
+        >
+        <div class="wrapper">
+          <ul class="dynamic-text">
+            <li><span>Thank Youu!👋‎‎</span></li>
+          </ul>
+        </div>
         <style>
           .container {
             display: flex;
@@ -155,6 +173,128 @@ import instagramImage from "../image/instagram.png";
             margin-top: -4px;
             font-size: 18px;
             color: black;
+          }
+          .wrapper {
+            display: flex;
+          }
+
+          .wrapper .text {
+            color: black;
+            font-size: 25px;
+            font-weight: 700;
+            margin-top: 40px;
+          }
+          .wrapper .dynamic-text {
+            margin-left: -39px;
+            height: 90px;
+            line-height: 90px;
+            overflow: hidden;
+          }
+
+          .dynamic-text li {
+            list-style: none;
+            color: black;
+            font-size: 20px;
+            font-weight: 500;
+            position: relative;
+            top: 0;
+            animation: slide 12 steps(4) infinite;
+          }
+
+          @keyframes slide {
+            100% {
+              top: -360px;
+            }
+          }
+
+          .dynamic-text li span {
+            position: relative;
+            margin: 5px o;
+            line-height: 90px;
+          }
+          .dynamic-text li span::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            height: 78px;
+            width: 100%;
+            background: white;
+            border-left: 2px solid white;
+            animation: typingg 3s steps(14) infinite;
+          }
+
+          @keyframes typingg {
+            40%,
+            60% {
+              left: calc(100% + 30px);
+            }
+            100% {
+              left: 0;
+            }
+          }
+
+          .profile {
+            color: black;
+            text-align: right;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(var(--accent-light), 25%);
+            background: linear-gradient(
+              rgba(var(--accent-dark), 66%),
+              rgba(var(--accent-dark), 33%)
+            );
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-size: 18px;
+            border: 1px solid black;
+            background: white;
+          }
+
+          .gambar img {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            transition: transform 0.3s ease-in-out;
+          }
+
+          .gambar:hover img {
+            transform: scale(1.5);
+          }
+
+          .typing-text {
+            overflow: hidden;
+            border-right: 0.15em solid black;
+            white-space: nowrap;
+            font-size: 20px;
+            width: 41%;
+            animation:
+              infinite typing 10s forwards,
+              blink-border 1s infinite step-start;
+          }
+
+          @keyframes typing {
+            0%,
+            100% {
+              width: 0;
+            }
+            50% {
+              width: 41%;
+            }
+          }
+
+          @keyframes closing {
+            0%,
+            100% {
+              width: 41%;
+            }
+            50% {
+              width: 0;
+            }
+          }
+
+          @keyframes blink-border {
+            50% {
+              border-color: transparent;
+            }
           }
         </style>
       </p>

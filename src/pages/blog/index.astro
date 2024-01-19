@@ -17,29 +17,32 @@ import webImage from "../../image/web.png";
   <body>
     <Header title={SITE_TITLE} />
     <main>
-      <h1>My Project</h1>
+      <h3>My Project</h3>
       <strong>Form login</strong>
       <br />
       Created a login form using <strong>HTML</strong> and <strong>CSS</strong>.
       This project strengthened my understanding of web fundamentals, allowing
       for aesthetically pleasing designs without additional frameworks. A step
       towards independent web design and development skills.<br />
-      <Image
-        src={loginImage}
-        alt="loginimage"
-        style="width: 422px; height: 591px; float: center; display: block; margin: 0 auto;"
-      />
+      <div class="gambar">
+        <Image
+          src={loginImage}
+          alt="loginimage"
+          style="width: 400px; height: 500px; float: center; display: block; margin: 0 auto;"
+        />
+      </div>
       <br />
-      <strong>Website Portofolio</strong>
+      <strong>Website Portfolio</strong>
       <br />
       I crafted a portfolio website using the <strong>Astro</strong> framework.<br
       />
-      <br />
-      <Image
-        src={webImage}
-        alt="webimage"
-        style="width: 422px; height: 591px; float: center; display: block; margin: 0 auto;"
-      />
+      <div class="gambar">
+        <Image
+          src={webImage}
+          alt="webimage"
+          style="width: 350px; height: 500px; float: center; display: block; margin: 0 auto;"
+        />
+      </div>
       <br />
     </main>
     <br />
@@ -51,23 +54,27 @@ import webImage from "../../image/web.png";
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 100%;
-          height: 100%;
+          width: 50%;
+          height: 50%;
         }
 
         .gambar {
-          background-color: #f8f9fa;
-          border: 1px solid #dee2e6;
-          border-radius: 0.25rem;
+          background-color: #fff;
           padding: 10px;
-          box-shadow: 0 2px 4px rgba(190, 88, 88, 0.1);
+          overflow: hidden;
         }
 
         .gambar img {
           width: 100%;
           height: auto;
           margin: 0 auto;
+          transition: transform 0.3s ease-in-out;
         }
+
+        .gambar:hover img {
+          transform: scale(1.1);
+        }
+
         .contact-container {
           display: flex;
           align-items: center;
