@@ -2,7 +2,22 @@
 import BaseHead from "../../components/BaseHead.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
-import { ABOUT_TITLE, SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import {
+  ABOUT_TITLE,
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+  BLOG_MYPROJECT,
+  BLOG_FORMLOGIN,
+  FORMLOGIN_1,
+  FORMLOGIN_2,
+  FORMLOGIN_3,
+  BLOG_PORTO,
+  PORTO_1,
+  PORTO_2,
+  HTML,
+  CSS,
+  ASTRO,
+} from "../../consts";
 import { Image } from "astro:assets";
 
 import loginImage from "../../image/loginnn.png";
@@ -13,18 +28,29 @@ import webImage from "../../image/web.png";
 <html lang="en">
   <head>
     <BaseHead title={ABOUT_TITLE} description={SITE_DESCRIPTION} />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <Header title={SITE_TITLE} />
     <main>
-      <h3>My Project</h3>
-      <strong>Form login</strong>
+      <h3 class="animate__animated animate__fadeInUp">{BLOG_MYPROJECT}</h3>
+      <strong class="animate__animated animate__fadeInUp"
+        >{BLOG_FORMLOGIN}</strong
+      >
       <br />
-      Created a login form using <strong>HTML</strong> and <strong>CSS</strong>.
-      This project strengthened my understanding of web fundamentals, allowing
-      for aesthetically pleasing designs without additional frameworks. A step
-      towards independent web design and development skills.<br />
-      <div class="gambar">
+      <div class="animate__animated animate__fadeInUp">
+        {FORMLOGIN_1}<strong class="animate__animated animate__fadeInUp"
+          >{HTML}</strong
+        >{FORMLOGIN_2}
+        <strong class="animate__animated animate__fadeInUp">{CSS}</strong>{
+          FORMLOGIN_3
+        }
+      </div>
+      <br />
+      <div class="gambar animate__animated animate__fadeInUp">
         <Image
           src={loginImage}
           alt="loginimage"
@@ -32,11 +58,12 @@ import webImage from "../../image/web.png";
         />
       </div>
       <br />
-      <strong>Website Portfolio</strong>
+      <strong class="animate__animated animate__fadeInUp">{BLOG_PORTO}</strong>
       <br />
-      I crafted a portfolio website using the <strong>Astro</strong> framework.<br
-      />
-      <div class="gambar">
+      {PORTO_1}<strong class="animate__animated animate__fadeInUp"
+        >{ASTRO}</strong
+      >{PORTO_2}<br />
+      <div class="gambar animate__animated animate__fadeInUp">
         <Image
           src={webImage}
           alt="webimage"

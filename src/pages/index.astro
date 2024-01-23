@@ -4,25 +4,39 @@ import htmlImage from "..//image/html.png";
 import cssImage from "..//image/css.png";
 import jsImage from "..//image/js.png";
 import cppImage from "..//image/c++.png";
-import gitImage from "..//image/git.png";
-import githubImage from "..//image/github.png";
 import reactImage from "..//image/react.png";
 import pinImage from "..//image/pin.png";
 import gptImage from "..//image/gpt.png";
 import astroImage from "../image/astro.jpg";
-import vscodeImage from "../image/vscode.png";
-import instagramImage from "../image/instagram.png";
 import nodeImage from "../image/node.png";
 import vercelImage from "../image/vercel.png";
-import emailImage from "../image/email.png";
-import riotImage from "../image/riot.png";
-import tsImage from "../image/ts.png";
 import gittImage from "../image/gitignore.png";
 
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { HOME_TITLE, SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import {
+  HOME_TITLE,
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+  MYNAME,
+  INDEX_DESCRIPTION,
+  INDEX_DESCRIPTION_1,
+  INDEX_DESCRIPTION_2,
+  INDEX_DESCRIPTION_3,
+  INDEX_DESCRIPTION_4,
+  INDEX_DESCRIPTION_5,
+  INDEX_DESCRIPTION_6,
+  INDEX_DESCRIPTION_7,
+  INDEX_FEATURED,
+  INDEX_REFERENCES,
+  INDEX_SKILSS,
+  HTML,
+  CSS,
+  JS,
+  REACT,
+  CPP,
+} from "../consts";
 import { Image } from "astro:assets";
 ---
 
@@ -30,6 +44,10 @@ import { Image } from "astro:assets";
 <html lang="en">
   <head>
     <BaseHead title={HOME_TITLE} description={SITE_DESCRIPTION} />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <Header title={SITE_TITLE} />
@@ -38,96 +56,120 @@ import { Image } from "astro:assets";
         src={profilImage}
         alt="alpanimage"
         style="width: 125px; height: 125px; border-radius: 50%; float: center; display: block; margin: 0 auto;"
+        class="animate__animated animate__fadeInUp"
       />
-      <a class="nama" href="https://instagram.com/kelraskie">
-        <h2>Alfan Hidayat</h2>
+      <a
+        class="nama animate__animated animate__fadeInUp"
+        href="https://instagram.com/kelraskie"
+      >
+        <h2 class="animate__animated animate__fadeInUp">{MYNAME}</h2>
       </a>
-      Hello, Everyone! <br />
-      I am a newbie front-end developer, and practicing to create a website and improve
-      my frontend skilss.
-      <br />
-      <br />
-      <strong>My Skills</strong>
-      <p>
+      <p class="animate__animated animate__fadeInUp">
+        {INDEX_DESCRIPTION}<br />
+        {INDEX_DESCRIPTION_1}
+      </p>
+      <strong class="animate__animated animate__fadeInUp">{INDEX_SKILSS}</strong
+      >
+      <p class="animate__animated animate__fadeInUp">
         <a>
           <Image
             src={htmlImage}
             alt="html"
             style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+            class="animate__animated animate__fadeInUp"
           />
           <Image
             src={cssImage}
             alt="css"
             style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+            class="animate__animated animate__fadeInUp"
           />
           <Image
             src={jsImage}
             alt="javascript"
             style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+            class="animate__animated animate__fadeInUp"
           />
           <Image
             src={reactImage}
             alt="react"
             style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+            class="animate__animated animate__fadeInUp"
           />
           <Image
             src={cppImage}
             alt="c++"
             style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+            class="animate__animated animate__fadeInUp"
           />
         </a>
       </p>
-      <p>
-        I'm currently focused on becoming a skilled front-end developer with a
-        passion for building engaging and user-friendly web applications.
+      <p class="animate__animated animate__fadeInUp">
+        {INDEX_DESCRIPTION_2}
       </p>
-      <p>
-        I independently learned <strong>HTML</strong>, <strong>CSS</strong>, and <strong
-          >JavaScript</strong
-        > at home, including exploring <strong>React</strong>. Meanwhile, I
-        focused on the <strong>C++</strong>
-        programming language at campus. With these dual approaches, I've been developing
-        skills in both web and programming domains.
+      <p class="animate__animated animate__fadeInUp">
+        {INDEX_DESCRIPTION_3}<strong class="animate__animated animate__fadeInUp"
+          >{HTML}</strong
+        >,
+        <strong class="animate__animated animate__fadeInUp">{CSS}</strong>{
+          INDEX_DESCRIPTION_4
+        }
+        <strong class="animate__animated animate__fadeInUp">{JS}</strong>{
+          INDEX_DESCRIPTION_5
+        }
+        <strong class="animate__animated animate__fadeInUp">{REACT}</strong>.
+        {INDEX_DESCRIPTION_6}<strong class="animate__animated animate__fadeInUp"
+          >{CPP}</strong
+        >
+        {INDEX_DESCRIPTION_7}
       </p>
       <>
         <br />
-        <strong>Featured Technologies Used</strong>
+        <strong class="animate__animated animate__fadeInUp"
+          >{INDEX_FEATURED}</strong
+        >
         <br />
         <Image
           src={astroImage}
           alt="git"
           style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+          class="animate__animated animate__fadeInUp"
         />
         <Image
           src={vercelImage}
           alt="vercel"
           style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+          class="animate__animated animate__fadeInUp"
         />
         <Image
           src={nodeImage}
           alt="node js"
           style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+          class="animate__animated animate__fadeInUp"
         />
 
         <Image
           src={gittImage}
           alt="node js"
           style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+          class="animate__animated animate__fadeInUp"
         />
       </>
-      <p>
-        <strong>References<br /></strong>
+      <p class="animate__animated animate__fadeInUp">
+        <strong>{INDEX_REFERENCES}<br /></strong>
 
         <Image
           src={gptImage}
           alt="gpt"
           style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+          class="animate__animated animate__fadeInUp"
         />
 
         <Image
           src={pinImage}
           alt="pin"
           style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+          class="animate__animated animate__fadeInUp"
         />
       </p>
     </main>

@@ -5,10 +5,7 @@ import alpannnnImage from "../image/alpannnn.jpg";
 import alpannnnnImage from "../image/alpannnnn.jpg";
 import alpannnnnnImage from "../image/alpannnnnn.jpg";
 import alpannnnnnnImage from "../image/alpannnnnnn.jpg";
-import gheaImage from "../image/ghea.png";
 import gitarImage from "../image/gitar.jpg";
-import onielImage from "../image/oniel.jpg";
-import playlistImage from "../image/playlist.jpg";
 import emailImage from "../image/email.png";
 import instagramImage from "../image/instagram.png";
 
@@ -36,29 +33,36 @@ import { Image } from "astro:assets";
 <html lang="en">
   <head>
     <BaseHead title={ABOUT_TITLE} description={SITE_DESCRIPTION} />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
     <Header title={SITE_TITLE} />
     <main>
-      <strong>{ABOUT_EVERYONE}</strong>
-      <div class="typing-text">
+      <strong class="animate__animated animate__fadeInUp"
+        >{ABOUT_EVERYONE}</strong
+      >
+      <div class="typing-text animate__animated animate__fadeInUp">
         <strong>{ABOUT_WEBDEV}</strong>
       </div>
       <br />
-      <div class="profile">
+      <div class="profile animate__animated animate__fadeInUp">
         <div class="profileimage">
           <Image
             src={alpannImage}
             alt="alpanimage"
             style="width: 100px; height: 100px; border-radius: 50%; float: right; display: block; margin: 0 auto;"
+            class="animate__animated animate__fadeInUp"
           />
         </div>
-        <div class="profiletext">
+        <div class="profiletext animate__animated animate__fadeInUp">
           {ABOUT_DESCRIPTION}
         </div>
       </div>
 
-      <p>
+      <p class="animate__animated animate__fadeInUp">
         <div class="container">
           <div class="gambar">
             <Image
@@ -105,206 +109,217 @@ import { Image } from "astro:assets";
             />
           </div>
         </div>
-        <br />
-        <strong>{ABOUT_CONTACT}</strong>
-        <br />
-        <a class="featured">
-          <div class="contact-container">
-            <a href="https://www.instagram.com/kelraskie/" target="_blank">
-              <Image
-                src={instagramImage}
-                alt="instagram image"
-                style="width: 40px; height: 40px; float: center; margin-right: 20px;"
-              />
-            </a>
-            <span class="username">{MYINSTAGRAM}</span>
-          </div>
-          <div class="contact-container">
-            <a href="mailto:alfanhidayat12321@gmail.com" target="_blank">
-              <Image
-                src={emailImage}
-                alt="email image"
-                style="width: 40px; height: 40px; float: center; margin-right: 20px;"
-              />
-            </a>
-            <span class="username">{MYEMAIL}</span>
-          </div>
-          <strong>{ABOUT_CLICKIMAGE}</strong>
-
-          <div class="wrapper">
-            <ul class="dynamic-text">
-              <li><span>{ABOUT_THANKYOU}</span></li>
-            </ul>
-          </div>
-        </a>
-        <style>
-          .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-          }
-
-          .gambar {
-            background-color: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 0.25rem;
-            padding: 10px;
-            box-shadow: 0 2px 4px rgba(190, 88, 88, 0.1);
-          }
-
-          .gambar img {
-            width: 100%;
-            height: auto;
-            margin: 0 auto;
-          }
-          .contact-container {
-            display: flex;
-            align-items: center;
-          }
-
-          .instagram-icon {
-            width: 24px;
-            height: 24px;
-            margin-right: 8px;
-          }
-
-          .keterampilann {
-            text-align: left;
-            color: black;
-            font-size: 18px;
-          }
-          .username {
-            margin-top: -4px;
-            font-size: 18px;
-            color: black;
-          }
-          .wrapper {
-            display: flex;
-          }
-
-          .wrapper .text {
-            color: black;
-            font-size: 25px;
-            font-weight: 700;
-            margin-top: 40px;
-          }
-          .wrapper .dynamic-text {
-            margin-left: -39px;
-            height: 90px;
-            line-height: 90px;
-            overflow: hidden;
-          }
-
-          .dynamic-text li {
-            list-style: none;
-            color: black;
-            font-size: 20px;
-            font-weight: 500;
-            position: relative;
-            top: 0;
-            animation: slide 12 steps(4) infinite;
-          }
-
-          @keyframes slide {
-            100% {
-              top: -360px;
-            }
-          }
-
-          .dynamic-text li span {
-            position: relative;
-            margin: 5px o;
-            line-height: 90px;
-          }
-          .dynamic-text li span::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            height: 78px;
-            width: 100%;
-            background: white;
-            border-left: 2px solid white;
-            animation: typingg 3s steps(14) infinite;
-          }
-
-          @keyframes typingg {
-            40%,
-            60% {
-              left: calc(100% + 30px);
-            }
-            100% {
-              left: 0;
-            }
-          }
-
-          .profile {
-            color: black;
-            text-align: left;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(var(--accent-light), 25%);
-            background: linear-gradient(
-              rgba(var(--accent-dark), 66%),
-              rgba(var(--accent-dark), 33%)
-            );
-            padding: 1.5rem;
-            border-radius: 8px;
-            font-size: 18px;
-            border: 2px solid #dee2e6;
-            background: white;
-          }
-
-          .gambar img {
-            width: 100%;
-            height: auto;
-            margin: 0 auto;
-            transition: transform 0.3s ease-in-out;
-          }
-
-          .gambar:hover img {
-            transform: scale(1.5);
-          }
-
-          .typing-text {
-            overflow: hidden;
-            border-right: 0.15em solid black;
-            white-space: nowrap;
-            font-size: 20px;
-            width: 41%;
-            animation:
-              infinite typing 10s forwards,
-              blink-border 1s infinite step-start;
-          }
-
-          @keyframes typing {
-            0%,
-            100% {
-              width: 0;
-            }
-            50% {
-              width: 41%;
-            }
-          }
-
-          @keyframes closing {
-            0%,
-            100% {
-              width: 41%;
-            }
-            50% {
-              width: 0;
-            }
-          }
-
-          @keyframes blink-border {
-            50% {
-              border-color: transparent;
-            }
-          }
-        </style>
       </p>
+      <br />
+      <strong class="animate__animated animate__fadeInUp"
+        >{ABOUT_CONTACT}</strong
+      >
+      <br />
+      <a class="featured animate__animated animate__fadeInUp">
+        <div class="contact-container animate__animated animate__fadeInUp">
+          <a href="https://www.instagram.com/kelraskie/" target="_blank">
+            <Image
+              src={instagramImage}
+              alt="instagram image"
+              style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+              class="animate__animated animate__fadeInUp"
+            />
+          </a>
+          <span class="username animate__animated animate__fadeInUp"
+            >{MYINSTAGRAM}</span
+          >
+        </div>
+        <div class="contact-container animate__animated animate__fadeInUp">
+          <a href="mailto:alfanhidayat12321@gmail.com" target="_blank">
+            <Image
+              src={emailImage}
+              alt="email image"
+              style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+              class="animate__animated animate__fadeInUp"
+            />
+          </a>
+          <span class="username animate__animated animate__fadeInUp"
+            >{MYEMAIL}</span
+          >
+        </div>
+        <strong class="animate__animated animate__fadeInUp"
+          >{ABOUT_CLICKIMAGE}</strong
+        >
+
+        <div class="wrapper animate__animated animate__fadeInUp">
+          <ul class="dynamic-text animate__animated animate__fadeInUp">
+            <li><span>{ABOUT_THANKYOU}</span></li>
+          </ul>
+        </div>
+      </a>
+      <style>
+        .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+        }
+
+        .gambar {
+          background-color: #f8f9fa;
+          border: 1px solid #dee2e6;
+          border-radius: 0.25rem;
+          padding: 10px;
+          box-shadow: 0 2px 4px rgba(190, 88, 88, 0.1);
+        }
+
+        .gambar img {
+          width: 100%;
+          height: auto;
+          margin: 0 auto;
+        }
+        .contact-container {
+          display: flex;
+          align-items: center;
+        }
+
+        .instagram-icon {
+          width: 24px;
+          height: 24px;
+          margin-right: 8px;
+        }
+
+        .keterampilann {
+          text-align: left;
+          color: black;
+          font-size: 18px;
+        }
+        .username {
+          margin-top: -4px;
+          font-size: 18px;
+          color: black;
+        }
+        .wrapper {
+          display: flex;
+        }
+
+        .wrapper .text {
+          color: black;
+          font-size: 25px;
+          font-weight: 700;
+          margin-top: 40px;
+        }
+        .wrapper .dynamic-text {
+          margin-left: -39px;
+          height: 90px;
+          line-height: 90px;
+          overflow: hidden;
+        }
+
+        .dynamic-text li {
+          list-style: none;
+          color: black;
+          font-size: 20px;
+          font-weight: 500;
+          position: relative;
+          top: 0;
+          animation: slide 12 steps(4) infinite;
+        }
+
+        @keyframes slide {
+          100% {
+            top: -360px;
+          }
+        }
+
+        .dynamic-text li span {
+          position: relative;
+          margin: 5px o;
+          line-height: 90px;
+        }
+        .dynamic-text li span::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          height: 78px;
+          width: 100%;
+          background: white;
+          border-left: 2px solid white;
+          animation: typingg 3s steps(14) infinite;
+        }
+
+        @keyframes typingg {
+          40%,
+          60% {
+            left: calc(100% + 30px);
+          }
+          100% {
+            left: 0;
+          }
+        }
+
+        .profile {
+          color: black;
+          text-align: left;
+          margin-bottom: 2rem;
+          border: 1px solid rgba(var(--accent-light), 25%);
+          background: linear-gradient(
+            rgba(var(--accent-dark), 66%),
+            rgba(var(--accent-dark), 33%)
+          );
+          padding: 1.5rem;
+          border-radius: 8px;
+          font-size: 18px;
+          border: 2px solid #dee2e6;
+          background: white;
+        }
+
+        .gambar img {
+          width: 100%;
+          height: auto;
+          margin: 0 auto;
+          transition: transform 0.3s ease-in-out;
+        }
+
+        .gambar:hover img {
+          transform: scale(1.5);
+        }
+
+        .typing-text {
+          overflow: hidden;
+          border-right: 0.15em solid black;
+          white-space: nowrap;
+          font-size: 20px;
+          width: 41%;
+          animation:
+            infinite typing 10s forwards,
+            blink-border 1s infinite step-start;
+        }
+
+        @keyframes typing {
+          0%,
+          100% {
+            width: 0;
+          }
+          50% {
+            width: 41%;
+          }
+        }
+
+        @keyframes closing {
+          0%,
+          100% {
+            width: 41%;
+          }
+          50% {
+            width: 0;
+          }
+        }
+
+        @keyframes blink-border {
+          50% {
+            border-color: transparent;
+          }
+        }
+      </style>
     </main>
+
     <Footer />
   </body>
 </html>
