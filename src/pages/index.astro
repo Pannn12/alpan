@@ -10,7 +10,7 @@ import gptImage from "..//image/gpt.png";
 import astroImage from "../image/astro.jpg";
 import nodeImage from "../image/node.png";
 import vercelImage from "../image/vercel.png";
-import gittImage from "../image/gitignore.png";
+import gittImage from "../image/git.png";
 
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
@@ -52,16 +52,15 @@ import { Image } from "astro:assets";
   <body>
     <Header title={SITE_TITLE} />
     <main>
-      <Image
-        src={profilImage}
-        alt="alpanimage"
-        style="width: 125px; height: 125px; border-radius: 50%; float: center; display: block; margin: 0 auto;"
-        class="animate__animated animate__fadeInUp"
-      />
-      <a
-        class="nama animate__animated animate__fadeInUp"
-        href="https://instagram.com/kelraskie"
-      >
+      <a href="https://www.instagram.com/kelraskie/" target="_blank">
+        <Image
+          src={profilImage}
+          alt="alpanimage"
+          style="width: 125px; height: 125px; border-radius: 50%; float: center; display: block; margin: 0 auto; cursor: pointer;"
+          class="animate__animated animate__fadeInUp"
+        />
+      </a>
+      <a class="nama animate__animated animate__fadeInUp">
         <h2 class="animate__animated animate__fadeInUp">{MYNAME}</h2>
       </a>
       <p class="animate__animated animate__fadeInUp">
@@ -123,6 +122,7 @@ import { Image } from "astro:assets";
         >
         {INDEX_DESCRIPTION_7}
       </p>
+
       <>
         <br />
         <strong class="animate__animated animate__fadeInUp"

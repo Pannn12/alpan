@@ -8,6 +8,7 @@ import alpannnnnnnImage from "../image/alpannnnnnn.jpg";
 import gitarImage from "../image/gitar.jpg";
 import emailImage from "../image/email.png";
 import instagramImage from "../image/instagram.png";
+import threadImage from "../image/thread.png";
 
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
@@ -22,6 +23,7 @@ import {
   ABOUT_CONTACT,
   MYINSTAGRAM,
   MYEMAIL,
+  MYTHREAD,
   ABOUT_CLICKIMAGE,
   ABOUT_THANKYOU,
 } from "../consts";
@@ -41,26 +43,13 @@ import { Image } from "astro:assets";
   <body>
     <Header title={SITE_TITLE} />
     <main>
-      <strong class="animate__animated animate__fadeInUp"
+      <strong class="animate__animated animate__bounceInLeft"
         >{ABOUT_EVERYONE}</strong
       >
-      <div class="typing-text animate__animated animate__fadeInUp">
+      <div class="typing-text animate__animated animate__bounceInLeft">
         <strong>{ABOUT_WEBDEV}</strong>
       </div>
       <br />
-      <div class="profile animate__animated animate__fadeInUp">
-        <div class="profileimage">
-          <Image
-            src={alpannImage}
-            alt="alpanimage"
-            style="width: 100px; height: 100px; border-radius: 50%; float: right; display: block; margin: 0 auto;"
-            class="animate__animated animate__fadeInUp"
-          />
-        </div>
-        <div class="profiletext animate__animated animate__fadeInUp">
-          {ABOUT_DESCRIPTION}
-        </div>
-      </div>
 
       <p class="animate__animated animate__fadeInUp">
         <div class="container">
@@ -110,6 +99,11 @@ import { Image } from "astro:assets";
           </div>
         </div>
       </p>
+      <div class="profile animate__animated animate__fadeInUp">
+        <div class="profiletext animate__animated animate__fadeInUp">
+          {ABOUT_DESCRIPTION}
+        </div>
+      </div>
       <br />
       <strong class="animate__animated animate__fadeInUp"
         >{ABOUT_CONTACT}</strong
@@ -142,10 +136,22 @@ import { Image } from "astro:assets";
             >{MYEMAIL}</span
           >
         </div>
+        <div class="contact-container animate__animated animate__fadeInUp">
+          <a href="https://www.threads.net/@kelraskie" target="_blank">
+            <Image
+              src={threadImage}
+              alt="email image"
+              style="width: 40px; height: 40px; float: center; margin-right: 20px;"
+              class="animate__animated animate__fadeInUp"
+            />
+          </a>
+          <span class="username animate__animated animate__fadeInUp"
+            >{MYTHREAD}</span
+          >
+        </div>
         <strong class="animate__animated animate__fadeInUp"
           >{ABOUT_CLICKIMAGE}</strong
         >
-
         <div class="wrapper animate__animated animate__fadeInUp">
           <ul class="dynamic-text animate__animated animate__fadeInUp">
             <li><span>{ABOUT_THANKYOU}</span></li>
@@ -256,7 +262,7 @@ import { Image } from "astro:assets";
 
         .profile {
           color: black;
-          text-align: left;
+          text-align: center;
           margin-bottom: 2rem;
           border: 1px solid rgba(var(--accent-light), 25%);
           background: linear-gradient(
@@ -266,7 +272,6 @@ import { Image } from "astro:assets";
           padding: 1.5rem;
           border-radius: 8px;
           font-size: 18px;
-          border: 2px solid #dee2e6;
           background: white;
         }
 
@@ -316,6 +321,49 @@ import { Image } from "astro:assets";
           50% {
             border-color: transparent;
           }
+        }
+
+        form {
+          margin-bottom: 30px;
+        }
+
+        label {
+          display: block;
+          margin-bottom: 10px;
+          font-size: 1.2rem;
+          color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          display: block;
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 20px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          font-size: 1.2rem;
+          color: #333;
+        }
+
+        textarea {
+          resize: vertical;
+        }
+
+        button[type="submit"] {
+          background-color: #333;
+          color: #fff;
+          padding: 10px 20px;
+          border-radius: 5px;
+          border: none;
+          font-size: 1.2rem;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+          background-color: #444;
         }
       </style>
     </main>

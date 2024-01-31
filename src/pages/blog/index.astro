@@ -6,6 +6,10 @@ import {
   ABOUT_TITLE,
   SITE_TITLE,
   SITE_DESCRIPTION,
+  INDEX_FEATURED,
+  BLOG_BLOG,
+  BLOG_DESCRIPTION,
+  BLOG_ABOUT,
   BLOG_MYPROJECT,
   BLOG_FORMLOGIN,
   FORMLOGIN_1,
@@ -14,14 +18,21 @@ import {
   BLOG_PORTO,
   PORTO_1,
   PORTO_2,
+  BLOG_LINK,
   HTML,
   CSS,
   ASTRO,
+  BLOG_VSCODE,
+  BLOG_GITHUB,
+  BLOG_GIT,
 } from "../../consts";
 import { Image } from "astro:assets";
 
 import loginImage from "../../image/loginnn.png";
 import webImage from "../../image/web.png";
+import gitImage from "../../image/gitignore.png";
+import vscodeImage from "../../image/vscode.png";
+import githubImage from "../../image/github.png";
 ---
 
 <!doctype html>
@@ -36,46 +47,85 @@ import webImage from "../../image/web.png";
   <body>
     <Header title={SITE_TITLE} />
     <main>
-      <h3 class="animate__animated animate__fadeInUp">{BLOG_MYPROJECT}</h3>
-      <strong class="animate__animated animate__fadeInUp"
-        >{BLOG_FORMLOGIN}</strong
-      >
-      <br />
-      <div class="animate__animated animate__fadeInUp">
-        {FORMLOGIN_1}<strong class="animate__animated animate__fadeInUp"
-          >{HTML}</strong
-        >{FORMLOGIN_2}
-        <strong class="animate__animated animate__fadeInUp">{CSS}</strong>{
-          FORMLOGIN_3
-        }
-      </div>
-      <br />
-      <div class="gambar animate__animated animate__fadeInUp">
-        <Image
-          src={loginImage}
-          alt="loginimage"
-          style="width: 400px; height: 500px; float: center; display: block; margin: 0 auto;"
-        />
-      </div>
-      <br />
-      <strong class="animate__animated animate__fadeInUp">{BLOG_PORTO}</strong>
-      <br />
-      {PORTO_1}<strong class="animate__animated animate__fadeInUp"
-        >{ASTRO}</strong
-      >{PORTO_2}<br />
-      <div class="gambar animate__animated animate__fadeInUp">
-        <Image
-          src={webImage}
-          alt="webimage"
-          style="width: 350px; height: 500px; float: center; display: block; margin: 0 auto;"
-        />
-      </div>
-      <br />
-    </main>
-    <br />
-    <br />
+      <div class="image-content">
+        <h1 class="animate__animated animate__fadeInUp">{BLOG_BLOG}</h1>
+        <p class="animate__animated animate__fadeInUp">
+          {BLOG_DESCRIPTION}
+        </p>
+        <strong class="animate__animated animate__fadeInUp"
+          >{INDEX_FEATURED}</strong
+        >
+        <br />
+        <div class="card-container">
+          <!-- Card 1 -->
+          <div class="card animate__animated animate__fadeInUp">
+            <Image
+              src={vscodeImage}
+              alt="Visual Studio Code"
+              class="card-image"
+            />
+            <h3 class="card-title">{BLOG_VSCODE}</h3>
+          </div>
 
-    <p>
+          <!-- Card 2 -->
+          <div class="card animate__animated animate__fadeInUp">
+            <Image src={githubImage} alt="GitHub" class="card-image" />
+            <h3 class="card-title">{BLOG_GITHUB}</h3>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card animate__animated animate__fadeInUp">
+            <Image src={gitImage} alt="Git" class="card-image" />
+            <h3 class="card-title">{BLOG_GIT}</h3>
+          </div>
+        </div>
+      </div>
+      <br />
+      <section class="image-content">
+        <a href="/about" class="button animate__animated animate__fadeInUp"
+          >{BLOG_ABOUT}</a
+        >
+      </section>
+      <br />
+      <h2>{BLOG_MYPROJECT}</h2>
+      <section class="sec-1 show-animate">
+        <strong class="animate" id="login">{BLOG_FORMLOGIN}</strong>
+        <br />
+        <div class="animate">
+          {FORMLOGIN_1}<strong class="animate">{HTML}</strong>{FORMLOGIN_2}
+          <strong class="animate">{CSS}</strong>{FORMLOGIN_3}
+        </div>
+        <br />
+        <div class="gambar animate">
+          <Image
+            src={loginImage}
+            alt="loginimage"
+            style="width: 400px; height: 500px; float: center; display: block; margin: 0 auto;"
+          />
+        </div>
+      </section>
+      <br />
+      <br />
+
+      <section class="sec-2 show-animate">
+        <div class="animate" id="porto">
+          <strong class="animate">{BLOG_PORTO}</strong>
+          <br />
+          {PORTO_1}<strong class="animate">{ASTRO}</strong>{PORTO_2}<br />
+        </div>
+        <div class="gambar animate">
+          <Image
+            src={webImage}
+            alt="webimage"
+            style="width: 350px; height: 500px; float: center; display: block; margin: 0 auto;"
+          />
+        </div>
+      </section>
+      <br />
+      <br />
+      <a href="https://alpan-v2.vercel.app/blog" style="text-decoration: none;"
+        ><h4>{BLOG_LINK}</h4></a
+      >
       <style>
         .container {
           display: flex;
@@ -83,6 +133,53 @@ import webImage from "../../image/web.png";
           align-items: center;
           width: 50%;
           height: 50%;
+        }
+
+        .image-container {
+          width: 100%;
+          height: 100vh;
+          background-image: url("image-background.jpg");
+          background-size: cover;
+          background-position: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .image-content {
+          text-align: center;
+          padding: 20px;
+          background-color: rgba(255, 255, 255, 0.8);
+          border-radius: 10px;
+        }
+
+        .image-content h1 {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+        }
+
+        .image-content p {
+          font-size: 1.2rem;
+          margin-bottom: 2rem;
+        }
+
+        .button {
+          background-color: black;
+          color: white;
+          padding: 10px 20px;
+          align-items: center;
+          text-align: center;
+          text-decoration: none;
+          border-radius: 4px;
+          font-size: 1.2rem;
+          margin-top: 1rem;
+          transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+          background-color: white;
+          color: black;
+          border: 1px solid black;
         }
 
         .gambar {
@@ -123,9 +220,123 @@ import webImage from "../../image/web.png";
           font-size: 18px;
           color: black;
         }
+
+        section {
+          overflow-x: hidden;
+        }
+        section .animate {
+          opacity: 0;
+          filter: blur(5px);
+          transition: 1s;
+        }
+
+        section.show-animate .animate {
+          opacity: 1;
+          filter: blur(0);
+        }
+
+        .sec-1 .animate {
+          transform: translateX(-100%);
+        }
+
+        .sec-1.show-animate .animate {
+          transform: translateX(0);
+        }
+        .sec-2 .animate {
+          transform: translateX(100%);
+        }
+
+        .sec-2.show-animate .animate {
+          transform: translateX(0);
+        }
+
+        .card-container {
+          display: flex;
+          justify-content: space-around;
+          margin-top: 30px;
+        }
+
+        .card {
+          width: 100px; /* Sesuaikan lebar card */
+          text-align: center;
+          padding: 10px; /* Sesuaikan padding jika diperlukan */
+          margin: 10px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          transition:
+            background-color 0.3s,
+            color 0.3s;
+        }
+
+        .card:hover {
+          background-color: grey;
+          color: #fff;
+        }
+
+        .card-image {
+          width: 80px; /* Sesuaikan ukuran gambar */
+          height: 80px;
+          border-radius: 5px;
+          object-fit: cover;
+        }
+
+        .card-title {
+          margin-top: 10px;
+          font-size: 18px;
+        }
+
+        .card-description {
+          font-size: 14px;
+          color: #555;
+        }
+
+        @media (max-width: 768px) {
+          .card {
+            width: 80px; /* Sesuaikan lebar card untuk layar seluler */
+            padding: 5px; /* Sesuaikan padding jika diperlukan */
+          }
+
+          .card-image {
+            width: 50px; /* Sesuaikan ukuran gambar untuk layar seluler */
+            height: 50px;
+          }
+
+          .card-title {
+            font-size: 14px; /* Sesuaikan ukuran font untuk layar seluler */
+          }
+
+          .card-description {
+            font-size: 10px; /* Sesuaikan ukuran font untuk layar seluler */
+          }
+        }
       </style>
-    </p>
+    </main>
 
     <Footer />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let sections = document.querySelectorAll("section");
+
+        function checkVisibility() {
+          sections.forEach((sec) => {
+            let top = window.scrollY;
+            let offset = sec.offsetTop - 150;
+            let height = sec.offsetHeight;
+
+            if (top >= offset && top < offset + height) {
+              sec.classList.add("show-animate");
+            } else {
+              sec.classList.remove("show-animate");
+            }
+          });
+        }
+
+        // Initial check on page load
+        checkVisibility();
+
+        // Scroll event listener
+        window.addEventListener("scroll", checkVisibility);
+      });
+    </script>
   </body>
 </html>
